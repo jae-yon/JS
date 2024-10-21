@@ -1,25 +1,20 @@
 const path = require('path');
 
+const express = require('express');
+const app = express();
+
 require('dotenv').config({
    path: path.join(__dirname, '/config/.env') 
 });
 
-const express = require('express');
-const app = express();
+const port = process.env.PORT;
 
 app.listen(port, () => {
-  console.log(`app listening on port ${process.env.PORT}`);
+  console.log(`app listening on port ${port}`);
 });
 
-app.get('/', (req, res)=> {
-  try {
-    res.sendFile(__dirname + '/index.html');
-  } catch (error) {
-    res.status(400).send(error);
-  }
-});
-
-
+const indexRouter = require('./routes/index');
 const fakesRouter = require('./routes/fakes');
 
+app.use('/', indexRouter);
 app.use('/fakes', fakesRouter);
