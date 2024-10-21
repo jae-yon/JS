@@ -1,11 +1,14 @@
-const express = require('express');
 const path = require('path');
+
+require('dotenv').config({
+   path: path.join(__dirname, '/config/.env') 
+});
+
+const express = require('express');
 const app = express();
 
-const port = 5555;
-
 app.listen(port, () => {
-  console.log(`app listening on port ${port}`);
+  console.log(`app listening on port ${process.env.PORT}`);
 });
 
 app.get('/', (req, res)=> {
@@ -17,6 +20,6 @@ app.get('/', (req, res)=> {
 });
 
 
-const usersRouter = require('./routes/fake-users');
+const fakesRouter = require('./routes/fakes');
 
-app.use('/users', usersRouter);
+app.use('/fakes', fakesRouter);

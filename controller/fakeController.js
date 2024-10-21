@@ -1,11 +1,10 @@
 const { faker } = require('@faker-js/faker');
 
-const express = require('express');
-const router = express.Router();
+const fake = {};
 
-router.get('/', (req, res) => {
+fake.users = (req, res) => {
   let {num} = req.query;
-  
+
   let users = [];
 
   if (num) {
@@ -31,6 +30,6 @@ router.get('/', (req, res) => {
   } catch (error) {
     res.status(404).send(error);
   }
-});
+}
 
-module.exports = router;
+module.exports = fake;
