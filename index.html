@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Data</title>
+</head>
+<body>
+  <div>
+    <input id="createUserIndex" type="text" value="1">
+    <button onclick="createUser()">Create Random User Data</button>
+  </div>
+</body>
+<script>
+  const createUser = () => {
+    location.href= `/users?num=${document.getElementById('createUserIndex').value}`;
+  }
+</script>
+</html>
