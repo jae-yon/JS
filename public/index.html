@@ -6,8 +6,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
-  
+<body class="bg-gray-50">
+  <main class="w-2/5 min-w-96 bg-gray-100 px-5 min-h-dvh">
+    <h1 class="text-4xl my-5 font-semibold">🐷 가계부</h1>
+    <!-- current-asset -->
+    <div class="p-5 bg-white rounded-xl shadow-md">
+      <div class="flex items-center justify-center">
+        <label class="w-20 text-base font-semibold min-w-20">현재 자산</label>
+        <!-- <p class="p-4 pr-0 text-base w-full border-none text-right cursor-pointer">-</p> -->
+        <input type="number" class="p-3 text-base rounded-xl w-full outline-indigo-500 bg-slate-100 text-center focus:bg-white" placeholder="현재 자산을 등록해주세요" />
+      </div>
+      <button class="mt-5 py-3 px-4 text-base rounded-lg w-full cursor-pointer text-white bg-indigo-500 hover:bg-indigo-600">자산 등록</button>
+    </div>
+      
+    <div class="my-5">
+      <button class="py-3 px-4 text-base rounded-lg w-full cursor-pointer shadow-md border text-slate-500 border-slate-500 hover:bg-slate-50">➕ 소비내역 추가하기</button>
+    </div>
+
+    <section class="p-5 bg-white rounded-xl shadow-md">
+      <h3 class="text-xl mb-5 font-semibold">💰 소비내역 작성하기</h3>
+      <div class="flex items-center justify-center my-2">
+        <label class="text-base font-semibold min-w-20"  for="item-category">카테고리</label>
+        <input 
+          class="p-3 text-base rounded-xl w-full outline-indigo-500 bg-slate-100 text-center focus:bg-white"
+          id="item-category"
+          name="item-category"
+          list="item-categories"
+          placeholder="카테고리를 선택해주세요"
+          required
+        />
+        <datalist id="item-categories">
+          <option value="카페"></option>
+          <option value="배달"></option>
+          <option value="쇼핑"></option>
+          <option value="식사"></option>
+        </datalist>
+      </div>
+      <div class="flex items-center justify-center my-2">
+        <label class="text-base font-semibold min-w-20" for="item-price">지출금액</label>
+        <input 
+          class="p-3 text-base rounded-xl w-full outline-indigo-500 bg-slate-100 text-center focus:bg-white"
+          type="number"
+          id="item-price"
+          name="item-price"
+          placeholder="지출금액을 입력해주세요"
+          min="0"
+          required
+        />
+      </div>
+      <div class="flex items-center justify-center my-2">
+        <label class="text-base font-semibold min-w-20" for="item-description">내용</label>
+        <input
+            class="p-3 text-base rounded-xl w-full outline-indigo-500 bg-slate-100 text-center focus:bg-white"
+            type="text"
+            id="item-description"
+            name="item-description"
+            required
+            placeholder="내용을 입력해주세요"
+          />
+      </div>
+      <button class="py-3 px-4 text-base rounded-lg w-full cursor-pointer text-white bg-indigo-500 hover:bg-indigo-600">등록하기</button>
+    </section>
+
+    <!-- <section class="p-5 bg-white rounded-xl"></section> -->
+  </main>
 </body>
 </html>
