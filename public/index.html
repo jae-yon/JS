@@ -15,10 +15,10 @@
     <div class="p-5 bg-white rounded-xl shadow-md">
       <div class="flex items-center justify-center">
         <label class="w-20 text-base font-semibold min-w-20">현재 자산</label>
-        <!-- <p class="p-4 pr-0 text-base w-full border-none text-right cursor-pointer">-</p> -->
-        <input type="number" class="p-3 text-base rounded-xl w-full outline-indigo-500 bg-slate-100 text-center focus:bg-white" placeholder="현재 자산을 등록해주세요" />
+        <p class="current-asset-value p-4 pr-0 text-base w-full border-none text-right cursor-pointer">-</p>
+        <input type="number" class="current-asset-input p-3 text-base rounded-xl w-full outline-indigo-500 bg-slate-100 text-center focus:bg-white" placeholder="현재 자산을 등록해주세요" value=""/>
       </div>
-      <button class="mt-5 py-3 px-4 text-base rounded-lg w-full cursor-pointer text-white bg-indigo-500 hover:bg-indigo-600">자산 등록</button>
+      <button class="current-asset-button mt-5 py-3 px-4 text-base rounded-lg w-full cursor-pointer text-white bg-indigo-500 hover:bg-indigo-600">자산 등록</button>
     </div>
       
     <div class="my-5">
@@ -69,8 +69,8 @@
       </div>
       <button class="py-3 px-4 text-base rounded-lg w-full cursor-pointer text-white bg-indigo-500 hover:bg-indigo-600">등록하기</button>
     </section>
-
-    <!-- <section class="p-5 bg-white rounded-xl"></section> -->
+    <section class="history p-5 bg-white rounded-xl"></section>
   </main>
+  <script src="./js/main.js" type="module"></script>
 </body>
 </html>
