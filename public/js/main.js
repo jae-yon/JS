@@ -1,8 +1,9 @@
-import { initCurrentAsset } from "./components/asset.js";
-import { initHistoryList } from "./components/history.js";
+import { initCurrentAsset } from "./asset.js";
+import { initHistoryList } from "./history.js";
+
 const init = () => {
-  initHistoryList();
   initCurrentAsset();
+  initHistoryList();
 }
 
 init();
